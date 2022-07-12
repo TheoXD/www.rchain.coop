@@ -1,0 +1,26 @@
+.project-dappy {
+    background: #356e78;
+    height: 100%;
+    width: 100%;
+    margin-top: 5em;
+    overflow: visible;
+}
+
+.ScreenshotContainer {
+    max-height: 128px;
+    width: 14em;
+    position: absolute;
+    top: 0;
+    right: 2em;
+    margin: "auto";
+    textAlign: "center";
+    overflow: visible;
+}
+
+.project-title h1 {
+    margin: 0;
+}
+
+.project-title h4 {
+    margin: 0;
+}

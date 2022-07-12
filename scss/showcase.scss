@@ -1,0 +1,66 @@
+#showcase-container {
+  min-height: 18em;
+  width: auto;
+  background: #fafafa;
+}
+
+#showcase-loading {
+  height: 100%;
+  width: auto;
+
+  .spinner {
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 17em;
+  }
+
+  @keyframes spinner {
+    to {transform: rotate(360deg);}
+  }
+
+  .spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6em;
+    height: 6em;
+    margin-top: -3em;
+    margin-left: -3em;
+    border-radius: 50%;
+    border: 8px solid transparent;
+    border-top-color: #111;
+    border-bottom-color: #111;
+    animation: spinner .8s ease infinite;
+  }
+}
+
+@keyframes fadein {
+  from { opacity: 0}
+  to   { opacity: 1}
+}
+
+
+#showcase {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background: none;
+  padding: 1em;
+
+  .project {
+    animation: fadein 1s;
+    background: none;
+    height: 12em;
+    width: auto;
+    color: white;
+    .project-title {
+      color: #444;
+      position: absolute;
+      top: 0.8em;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

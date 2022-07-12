@@ -166,7 +166,7 @@
 }
 
 .pageIndex .topSection {
-  background: linear-gradient(20deg, #111, #121217);
+  background: linear-gradient(20deg, #111, hsl(240deg, 13%, 8%));
   margin: 0px;
   padding-bottom: 40px;
   background: url("/assets/mountaindark1920.jpg");
@@ -191,7 +191,7 @@
 .pageIndex .alert {
   margin-top: 1rem;
   background-color: #0fb9c9;
-  border: 1px solid #63e5fc;
+  border: 1px solid rgb(99, 229, 252);
   background: rgba(160, 253, 247, 0.7);
   color: #111;
   padding: 1rem;
@@ -212,7 +212,7 @@
   padding-left: 50px;
   padding-right: 50px;
   height: 800px;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .pageIndex .top .left {
   grid-row: 1;
@@ -246,13 +246,17 @@
   font-size: 3.8rem;
   font-weight: 600;
 }
+.pageIndex .top .left h1.rchain-scales b {
+  font-size: 5rem;
+  margin-right: 12px;
+}
 .pageIndex .top .left .main-p {
   font-size: 1.9rem;
   margin-top: 10px;
   text-align: justify;
   max-width: 900px;
   font-weight: 300;
-  color: white;
+  color: rgb(255, 255, 255);
   padding: 8px;
   border-radius: 2px;
 }
@@ -1663,7 +1667,7 @@ pre {
   background-color: transparent;
 }
 .nav:not(.scroll) .item > a {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .nav:not(.scroll) .item .btn-blue {
   color: #fff;
@@ -1740,7 +1744,6 @@ pre {
   .nav-mobile {
     display: block;
   }
-
   .nav {
     display: none;
   }
@@ -1862,7 +1865,6 @@ pre {
   #communitySection .section > div:nth-child(1) {
     width: 100%;
   }
-
   #communitySection .section > .flexWrapper:nth-child(3) > div:nth-child(2) img {
     width: 100%;
   }
@@ -2189,7 +2191,7 @@ pre {
   padding: 1.1rem 2.1rem;
 }
 .btn-dark-and-transparent:hover {
-  background: linear-gradient(20deg, rgba(255, 255, 255, 0.9), white);
+  background: linear-gradient(20deg, rgba(255, 255, 255, 0.9), rgb(255, 255, 255));
 }
 
 .btn-rchain {
@@ -2259,6 +2261,73 @@ pre {
 .message.orange {
   background-color: #ffe08a;
   color: #111;
+}
+
+#showcase-container {
+  min-height: 18em;
+  width: auto;
+  background: #fafafa;
+}
+
+#showcase-loading {
+  height: 100%;
+  width: auto;
+}
+#showcase-loading .spinner {
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 17em;
+}
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+#showcase-loading .spinner:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6em;
+  height: 6em;
+  margin-top: -3em;
+  margin-left: -3em;
+  border-radius: 50%;
+  border: 8px solid transparent;
+  border-top-color: #111;
+  border-bottom-color: #111;
+  animation: spinner 0.8s ease infinite;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#showcase {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background: none;
+  padding: 1em;
+}
+#showcase .project {
+  animation: fadein 1s;
+  background: none;
+  height: 12em;
+  width: auto;
+  color: white;
+}
+#showcase .project .project-title {
+  color: #444;
+  position: absolute;
+  top: 0.8em;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (max-width: 960px) {
