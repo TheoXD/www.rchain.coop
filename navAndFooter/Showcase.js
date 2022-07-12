@@ -9,7 +9,7 @@ export default class extends React.Component {
       $(document).ready(function(){
         $('.owl-carousel').owlCarousel({
           margin: 24,
-          autoplay:false,
+          autoplay:true,
           autoplayTimeout:10000,
           autoplayHoverPause:true,
           loop: true,
