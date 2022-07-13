@@ -1,5 +1,6 @@
 const path = require("path");
 const webpack = require('webpack');
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 
 module.exports = {
   entry: "./navAndFooter/index.js",
@@ -28,6 +29,7 @@ module.exports = {
       jQuery: 'jquery',
       'window.jQuery': 'jquery'
     }),
+    new NodePolyfillPlugin()
   ],
   externals: {},
 };
